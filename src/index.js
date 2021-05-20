@@ -7,6 +7,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import { BrowserRouter } from "react-router-dom";
 
 ReactDOM.render(
+  // es6문법?
   <React.StrictMode>
     <BrowserRouter>
       <App />
@@ -14,6 +15,8 @@ ReactDOM.render(
   </React.StrictMode>,
   document.getElementById("root"),
 );
+
+  //StrictMode: ES6 문법으로 잘 작성되었는지 엄격하게 검사하겠다. 개발모드에서만 동작
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
