@@ -1,4 +1,4 @@
-function fun() {
+function fun(props) {
   return "동작";
 }//이건 컴포넌트가 아님 그냥 함수
 

@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-function ComCTwoWayBinding() {
+function ComCTwoWayBinding(props) {
 
   const [content, setContent] = useState("");//상태를 만드는것
 

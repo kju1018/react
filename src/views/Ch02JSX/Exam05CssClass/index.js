@@ -5,7 +5,7 @@ import "./style.css"
     여러행에 걸쳐 주석 내용을 작성할 때
   */
 
-function Exam05CssClass() {
+function Exam05CssClass(props) {
   const name = "react";
   return (
     <div className="card">

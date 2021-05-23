@@ -2,7 +2,7 @@ import ComA from "./ComA";
 import ComB from "./ComB";
 import ComC from "./ComC";
 
-function Exam08Ref() {
+function Exam08Ref(props) {
 
   return (
     <div className="card">
@@ -20,17 +20,17 @@ function Exam08Ref() {
 
 export default Exam08Ref;
 
-{/* <div id="div1"></div>
+// {/* <div id="div1"></div>
 
-var div1 = document.getElementById("div1");
-div1.innerHTML = "...";
+// var div1 = document.getElementById("div1");
+// div1.innerHTML = "...";
 
-var div1 = document.querySelector("#div1");
-div1.innerHTML = "...";
+// var div1 = document.querySelector("#div1");
+// div1.innerHTML = "...";
 
-var div1 = $("#id");
-div.html("...");
-----------------------------------
-<div ref={div1}></div>
-const div1 = userRe(); // createRef();
-div1.current.innerHTML = "..."; */}
+// var div1 = $("#id");
+// div.html("...");
+// ----------------------------------
+// <div ref={div1}></div>
+// const div1 = userRe(); // createRef();
+// div1.current.innerHTML = "..."; */}

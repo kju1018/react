@@ -1,4 +1,4 @@
-function Exam03Condition() {
+function Exam03Condition(props) {
   const var1 = "리액트2";
   const var2 = false;
   const var3 = "";

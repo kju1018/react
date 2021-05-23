@@ -1,6 +1,7 @@
 import React from "react";
 
 class ComB extends React.Component {
+
   render() {
     return (
       <div className="card">
