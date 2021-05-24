@@ -23,7 +23,11 @@ class ComAClass extends React.Component {
       ...this.state,
       number: this.state.number + 1,
       color: "black"
-    })
+    }, () => {
+      console.log("이후 : "  + this.state.number);
+    });
+    //() => 이거는 이 상태가 반영이되면 실행, 콜백함수
+    console.log("이전: "  + this.state.number);
     //여기서는 새로운 상태 테이터를 만들어줌
     //이 새로운 상태데이터와 위에 이전 상태데이터를 비교해서 변경되어있으면 render 실행
     //비동기 작업이 끝나야 render 실행

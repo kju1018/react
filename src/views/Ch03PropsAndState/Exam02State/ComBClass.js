@@ -41,6 +41,7 @@ class ComBClass extends React.Component {
   //호출은 비동기 실행하는 내용은 동기 콜백함수이기 때문
   //이 함수가 실행이될때 새로운 상태값을 리턴하도록
   //성능향상을 위해 사용
+  // 함수를 넘겨주면 순차적으로 실행
   render() {
     return (
       <div class="card">

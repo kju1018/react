@@ -24,7 +24,7 @@ function ComCFunWithImmer(props) {
       }))
     } else {
       if(event.target.checked){
-        setJoinForm(produce((draft) => {
+        setJoinForm(produce((draft) => {//draft는 이전 상태 객체를 복제한 객체
           draft.uskill.push(event.target.value);
         }))
       } else {
