@@ -19,7 +19,7 @@ function ComAFun(props) {
       number: state.number + 1
     });
     name = "리액트";
-    //컴포넌트에 상태가 바뀌게되면 함수형은 다시 실행됨 그래서 여기에서 "리액트"라고 바꾸어도 소용이 없음
+    //컴포넌트에 가 바뀌게되면 함수형은 다시 실행됨 그래서 여기에서 "리액트"라고 바꾸어도 소용이 없음
   };
   //상태로 안하고 
   const changeColor = (event) => {
@@ -31,7 +31,7 @@ function ComAFun(props) {
 
   console.log("ComAFun 실행");
 
-  return (
+  return (//아쉬웠던점, 데이터 3법?
     <div class="card">
         <div class="card-header">
           ComAFun

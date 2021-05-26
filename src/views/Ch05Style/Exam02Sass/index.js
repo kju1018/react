@@ -10,7 +10,6 @@ function Exam02Sass(props) {
 
   const [state, setState] = useState({
     userId: "user",
-
   });
 
   return (
