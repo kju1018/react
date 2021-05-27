@@ -61,6 +61,14 @@ function BoardList(props) {
     });
   },[]);
 
+  // const removeBoard = useCallback((bno) => {
+   
+  //   setBoards(prevBoards => {
+  //     const newBoards = prevBoards.filter(board => board.bno !== bno);
+  //     return newBoards;
+  //   });
+  // },[boards]);//이렇게 하면 리 렌더링됌
+
   const removeBoard = useCallback((bno) => {
    
     setBoards(prevBoards => {

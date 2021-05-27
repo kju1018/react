@@ -1,9 +1,11 @@
 import { useCallback, useMemo, useState } from "react";
 import BoardListItem from "./BoardListItem";
+import style from "./style.module.css";
+import { AutoSizer, List } from "react-virtualized";
 
 function getBoards(props) {
   const boards = [];
-  for(var i = 5 ; i >=1; i--) {
+  for(var i = 10000 ; i >=1; i--) {
     boards.push({bno:i, btitle:"제목"+i})
   }
   return boards;
@@ -13,7 +15,7 @@ function BoardList(props) {
 
   const [btitle, setBtitle] = useState("");
   const [boards, setBoards] = useState(getBoards);
-  const [bno, setBno] = useState(6);
+  const [bno, setBno] = useState(10001);
 
   // const getLength = () => {
   //   console.log("getlength 실행");
@@ -69,6 +71,16 @@ function BoardList(props) {
     });
   },[]);
 
+  const rowRenderer = ({index, key, style}) => {
+    return (
+      <div key={key} style={style}>
+        <BoardListItem  board={boards[index]} 
+                        changeBoard={changeBoard} 
+                        removeBoard={removeBoard}/>
+      </div>
+    );
+  }
+
   return (
     <div className="card">
       <div className="card-header">
@@ -91,13 +103,28 @@ function BoardList(props) {
           <span className="border" style={{width:"80px"}}>번호</span>
           <span className="border flex-fill">제목</span>
         </div>
+        {/* <div className={style.list}>
+          {boards.map(board => {
+            return (
+              <BoardListItem key={board.bno} board={board} changeBoard={changeBoard} removeBoard={removeBoard}/>
+            );
+          })}
+        </div> */}
 
-        {boards.map(board => {
-          return (
-            <BoardListItem key={board.bno} board={board} changeBoard={changeBoard} removeBoard={removeBoard}/>
-          );
-        })}
-
+        <AutoSizer disableHeight>
+          {({width, height}) => {
+            return(
+              <List width={width} height={300}
+                    list={boards}
+                    rowCount={boards.length}
+                    rowHeight={40}
+                    rowRenderer={rowRenderer}
+                    overscanRowCount={5}/>
+            )
+          }}
+        </AutoSizer>
+        {/* 여기 boards가 위에 boards인가 */}
+        {/* width를 자동으로 계산해서 들어오지만, height는 여기서 무시하라고 작성해놔서 안 들어옴 */}
       </div>
     </div>
   );

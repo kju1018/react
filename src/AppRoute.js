@@ -7,6 +7,7 @@ import Ch04LifeCycle from "views/Ch04LifeCycle";
 import Ch05Style from "views/Ch05Style";
 import Ch06Route from "views/Ch06Route";
 import Ch07PerformanceImprovement from "views/Ch07PerformanceImprovement";
+import Ch08GlobalState from "views/Ch08GlobalState";
 //jsconfig로 하면 src가 기본 경로로 되어있음
 
 function AppRoute(props) {
@@ -20,6 +21,7 @@ function AppRoute(props) {
       <Route path="/ch05" component={Ch05Style} />
       <Route path="/ch06" component={Ch06Route} />
       <Route path="/ch07" component={Ch07PerformanceImprovement} />
+      <Route path="/ch08" component={Ch08GlobalState} />
       <Redirect to="/" />
       {/* 어느 누구도 해당하지 않으면 home으로 감  */}
     </Switch>

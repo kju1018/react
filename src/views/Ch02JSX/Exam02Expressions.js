@@ -1,8 +1,8 @@
-function fun(props) {
+function fun() {
   return "동작";
 }//이건 컴포넌트가 아님 그냥 함수
 
-function Exam02Expressions() {
+function Exam02Expressions(props) {
   const name = "리액트";
 
   return (
