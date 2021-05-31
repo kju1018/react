@@ -40,4 +40,9 @@ export function updateBoard(board) {
 
 export function downloadAttach(bno) {
   return axios.get("/boards/battach/" + bno, {responseType: "blob"});
+  //axios가 이렇게 지정을하면 파싱을함
+  //이렇게 지정안하면 문자인줄알고 파싱하는데 지정하면 파싱안하고 그대로 전달
+  //생략되면 json타입이면 자바스크립트 타입으로 자동으로 만들어줌
+  //이걸 지정해주면 데이터를 가공하지 않고 response에 심어서 전달?
+  //이미지 타입을 받을때는 responseType을 명시해야함
 }

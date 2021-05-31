@@ -2,11 +2,11 @@ import axios from "axios";
 
 axios.defaults.baseURL = "http://localhost:8080";
 
-function addAuthHeader(authToken) {
+export function addAuthHeader(authToken) {
   axios.defaults.headers.common["authToken"] = authToken;
 }
 
-function removeAuthHeader() {
+export function removeAuthHeader() {
   delete axios.defaults.headers.common["authToken"];
 }
 
